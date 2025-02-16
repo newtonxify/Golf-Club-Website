@@ -1,0 +1,302 @@
+/* General Styles for the index.html and vavigation bar */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* Background Image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/image2.jpg') no-repeat center center/cover;
+  filter: brightness(50%) blur(3px); /* Darken & Blur */
+  z-index: -1; /* Keep behind everything */
+}
+
+/* Dark Mode */
+body.dark-mode::before {
+  filter: brightness(30%) blur(2px);
+}
+
+  /* Dark Mode */
+body.dark-mode {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .cta-button {
+    background-color: #000;
+    color: #D4AF37;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #D4AF37;
+    color: #000;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: rgba(35, 124, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
+    border-radius: 50px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    text-align: center;
+  }
+
+  /* Navbar Links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  transform: scale(2.9); /* Slightly shrink */
+  color: cyan;
+  text-shadow: 0 0 10px rgb(61, 61, 61);
+}
+
+/* Animated Outer Glow */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(5, 73, 20, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(5, 73, 20, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(5, 73, 20, 0.5);
+  }
+}
+
+.navbar.glowing {
+  animation: glow 30s infinite alternate;
+}
+
+.logo img {
+  position: fixed;
+  top: 30px; /* Adjust positioning */
+  left: 13%; /* Align with navbar */
+  width: 90px; /* Adjust size */
+  height: auto;
+}  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #FFF;
+  }
+
+  /* Dark Mode Button */
+.toggle-btn {
+  top: 80px;
+  right: 20px;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.toggle-btn:hover {
+  background: rgb(5, 73, 20, 0.5);
+}
+
+/* Adjust Button for Dark Mode */
+body.dark-mode .toggle-btn {
+  background: #ddd;
+  color: black;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background: #bbb;
+}
+  
+  .toggle-button-responsive {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .toggle-button-responsive .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #FFF;
+    margin: 4px 0;
+  }
+
+  /* Image Slider */
+.slider-container {
+  position: -ms-page;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Show the active slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Navigation Buttons - Hidden by Default */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  transition: background 0.3s;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Show buttons only when hovering over slider */
+.slider-container:hover .prev,
+.slider-container:hover .next {
+  display: block;
+}
+
+.slider-section {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer .social-links {
+    margin-top: 10px;
+  }
+  
+  .footer .social-links a {
+    color: #D4AF37;
+    margin: 0 10px;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Navigation Bar */
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }  
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #000;
+      position: absolute;
+      top: 70px;
+      left: 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .toggle-button-responsive {
+      display: flex;
+    }
+
+    .logo {
+      width: 40px ;
+    }
+  
+    /* Footer */
+    .footer {
+      padding: 0px;
+    }
+  }
