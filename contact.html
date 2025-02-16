@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMC Golf Club - Home</title>
-    <link rel="stylesheet"   href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/contact_styles.css">
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -23,6 +24,24 @@
     <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark/White</button>
   </nav>
 
+  <div class="content">
+      <!-- Contact Us Section -->
+      <section class="contact-section">
+          <h2>Contact Us</h2>
+          <div class="contact-info">
+              <p><strong>Address:</strong> 123 Golf Course Road, PMC City</p>
+              <p><strong>Phone:</strong> +27 12 345 6789</p>
+              <p><strong>Email:</strong> contact@pmcgolfclub.com</p>
+          </div>
+          <form class="contact-form">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <textarea rows="4" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+          </form>
+      </section>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -34,5 +53,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Link to External JavaScript File -->
+  <script src="scripts/script.js"></script>
+  
 </body>
 </html>
