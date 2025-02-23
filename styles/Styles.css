@@ -1,4 +1,7 @@
 body {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -61,7 +64,7 @@ body.dark-mode {
   
   /* Navigation Bar */
   .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(18, 66, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +100,7 @@ body.dark-mode {
 /* Animated Outer Glow */
 @keyframes glow {
   0% {
-    box-shadow: 0 0 10px rgba(5, 73, 20, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
   70% {
     box-shadow: 0 0 20px rgba(5, 73, 20, 0.5);
@@ -106,6 +109,17 @@ body.dark-mode {
     box-shadow: 0 0 10px rgba(5, 73, 20, 0.5);
   }
 }
+
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 .navbar.glowing {
   animation: glow 30s infinite alternate;
@@ -275,7 +289,7 @@ body.dark-mode .toggle-btn:hover {
       flex-direction: column;
       text-align: center;
       padding: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(37, 129, 1, 0.7);
       display: flex;
       box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
       border-radius: 50px;
