@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PMC Golf Club - Home</title>
-  <link rel="stylesheet"   href="styles/Styles.css">
-  
+  <link rel="stylesheet" href="styles/landing_page.css">
+  <link rel="stylesheet" href="styles/Styles.css">
 </head>
 <body>
 
-  
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+      <h1>Welcome to PMC Golf Club</h1>
+      <p>Experience the finest golfing experience in a breathtaking setting.</p>
+  </div>
+</section>
 
   <!-- Navigation Bar -->
-  <div class="logo">
+  <div class="logo-nav-container">
+    <div class="logo">
     <img src="images/logo png.png" alt="PMC Golf Club Logo">
   </div>
   <nav class="navbar glowing">
@@ -24,14 +31,15 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark/White</button>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
     <div class="toggle-button-responsive">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
   </nav>
-
+  </div>
+  
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -46,6 +54,5 @@
 
   <!-- Link to External JavaScript File -->
   <script src="scripts/script.js"></script>
-
 </body>
 </html>

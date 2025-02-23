@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: url('images/image2') no-repeat center center/cover;
+}
+.content {
+    flex: 1;
+}
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('images/image2.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-content {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: auto;
+}

@@ -1,11 +1,10 @@
-/* General Styles for the index.html and vavigation bar */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    transition: background 0.3s, color 0.3s;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: url('images/image2') no-repeat center center/cover;
+}
 
   /* Background Image */
 body::before {
@@ -15,9 +14,14 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/image2.jpg') no-repeat center center/cover;
+  background: url('/images/background.png') no-repeat center center/cover;
   filter: brightness(50%) blur(3px); /* Darken & Blur */
   z-index: -1; /* Keep behind everything */
+}
+
+logo-nav-container {
+  height: 200px;
+  position: fixed;
 }
 
 /* Dark Mode */
@@ -57,7 +61,7 @@ body.dark-mode {
   
   /* Navigation Bar */
   .navbar {
-    background-color: rgba(35, 124, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +69,7 @@ body.dark-mode {
     gap: 20px;
     box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
     border-radius: 50px;
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -86,7 +90,7 @@ body.dark-mode {
 /* Hover Effect */
 .navbar a:hover {
   transform: scale(2.9); /* Slightly shrink */
-  color: cyan;
+  color: rgb(17, 167, 0);
   text-shadow: 0 0 10px rgb(61, 61, 61);
 }
 
@@ -95,7 +99,7 @@ body.dark-mode {
   0% {
     box-shadow: 0 0 10px rgba(5, 73, 20, 0.5);
   }
-  50% {
+  70% {
     box-shadow: 0 0 20px rgba(5, 73, 20, 0.5);
   }
   100% {
@@ -108,7 +112,7 @@ body.dark-mode {
 }
 
 .logo img {
-  position: fixed;
+  position: absolute;
   top: 30px; /* Adjust positioning */
   left: 13%; /* Align with navbar */
   width: 90px; /* Adjust size */
@@ -127,6 +131,7 @@ body.dark-mode {
 
   /* Dark Mode Button */
 .toggle-btn {
+  visibility: hidden;
   top: 80px;
   right: 20px;
   background: #444;
@@ -245,14 +250,13 @@ body.dark-mode .toggle-btn:hover {
   
   /* Footer */
   .footer {
-    background-color: #000;
-    color: #FFF;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
   .footer .social-links {
@@ -265,12 +269,18 @@ body.dark-mode .toggle-btn:hover {
   }
   
   /* Media Queries for Mobile Responsiveness */
-  @media (max-width: 768px) {
+  @media (max-width: 954px) {
     /* Navigation Bar */
     .navbar {
       flex-direction: column;
       text-align: center;
       padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
+      border-radius: 50px;
+      position: absolute;
+      transform: translateX(-50%);
     }  
 
     .nav-links {
