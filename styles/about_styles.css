@@ -1,0 +1,84 @@
+ /* About Section Styling */
+ .about {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+        }
+
+.about h2 {
+    font-size: 2em;
+    color: #2c3e50;
+        }
+
+.about p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+        }
+
+/* Executives Section Styling */
+.executives {
+    position: relative;
+    top: 120px;
+    text-align: center;
+    margin: 50px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+        }
+
+.executives h2 {
+    font-size: 2em;
+    color: #2c3e50;
+        }
+
+.executive-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+        }
+
+.executive {
+    text-align: center;
+    width: 200px;
+        }
+
+.executive imgEx {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #27ae60;
+    transition: transform 0.3s;
+        }
+
+.executive imgEx:hover {
+    transform: scale(1.1);
+        }
+
+.executive p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+        }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+            }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+            }
+        }

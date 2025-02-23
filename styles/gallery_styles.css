@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+        }
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+        }
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+        }
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+        }
+
+.gallery-item:hover {
+    transform: scale(1.1);
+        }
