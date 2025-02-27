@@ -19,11 +19,12 @@ body::before {
   background: url('../images/background.png') no-repeat center center/cover;
   filter: brightness(50%) blur(3px); /* Darken & Blur */
   z-index: -1; /* Keep behind everything */
+  background-size: cover;
 }
 
-logo-nav-container .logo {
+logo-nav-container {
   height: 200px;
-  gap: 2rem;
+  position: fixed;
 }
 
 /* Dark Mode */
@@ -68,11 +69,10 @@ body.dark-mode {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    gap: 20px;
-    box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
-    border-radius: 50px;
-    position: absolute;
-    top: 20px;
+    box-shadow: 0 0 15px rgb(255, 255, 255); /* Outer glow effect */
+    border-radius: 103px;
+    position: relative;
+    top: 26px;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
@@ -91,9 +91,11 @@ body.dark-mode {
 
 /* Hover Effect */
 .navbar a:hover {
-  transform: scale(2.9); /* Slightly shrink */
   color: rgb(17, 167, 0);
+  transform: scale(2.9); /* Slightly shrink */
   text-shadow: 0 0 10px rgb(61, 61, 61);
+  border: ridge;
+  border-block-color: white;
 }
 
 /* Animated Outer Glow */
@@ -126,8 +128,8 @@ body.dark-mode {
 
 .logo img {
   position: absolute;
-  top: 30px; /* Adjust positioning */
-  left: 13%; /* Align with navbar */
+  top: 31px; /* Adjust positioning */
+  left: 12%; /* Align with navbar */
   width: 90px; /* Adjust size */
   height: auto;
 }  
@@ -172,101 +174,18 @@ body.dark-mode .toggle-btn:hover {
 }
   
   .toggle-button-responsive {
-    display: none;
-    flex-direction: column;
+    color: antiquewhite;
+    font-size: 2.5rem;
     cursor: pointer;
+    display: none;
+    box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
   }
-  
-  .toggle-button-responsive .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #FFF;
-    margin: 4px 0;
-  }
-
-  /* Image Slider */
-.slider-container {
-  position: -ms-page;
-  width: 100%;
-  max-width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Slider */
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 0;
-}
-
-/* Show the active slide */
-.slide.active {
-  opacity: 1;
-}
-
-/* Navigation Buttons - Hidden by Default */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  display: none;
-  transition: background 0.3s;
-}
-
-.prev {
-  left: 20px;
-}
-
-.next {
-  right: 20px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Show buttons only when hovering over slider */
-.slider-container:hover .prev,
-.slider-container:hover .next {
-  display: block;
-}
-
-.slider-section {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
   
   /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
-    background-color: #000000;
-    color: white;
+    background-color: rgba(5, 73, 20, 0.5);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -282,17 +201,14 @@ body.dark-mode .toggle-btn:hover {
   }
   
   /* Media Queries for Mobile Responsiveness */
-  @media (max-width: 954px) {
+  @media (max-width: 992px) {
     /* Navigation Bar */
     .navbar {
-      flex-direction: column;
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(37, 129, 1, 0.7);
+      flex-direction:column;
+      text-align: match-parent;
+      padding: 5px;
       display: flex;
-      box-shadow: 0 0 15px rgba(35, 124, 0, 0.7); /* Outer glow effect */
-      border-radius: 50px;
-      position: absolute;
+      position: relative;
       transform: translateX(-50%);
     }  
 
@@ -300,7 +216,7 @@ body.dark-mode .toggle-btn:hover {
       display: none;
       flex-direction: column;
       width: 100%;
-      background-color: #000;
+      background-color: rgba(18, 66, 0, 0.7);
       position: absolute;
       top: 70px;
       left: 0;
@@ -308,6 +224,7 @@ body.dark-mode .toggle-btn:hover {
   
     .nav-links.active {
       display: flex;
+      align-content: center;
     }
   
     .toggle-button-responsive {
@@ -315,7 +232,8 @@ body.dark-mode .toggle-btn:hover {
     }
 
     .logo {
-      width: 40px ;
+      position: relative;
+      right: 30px;
     }
   
     /* Footer */

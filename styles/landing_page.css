@@ -1,26 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: url('images/image2') no-repeat center center/cover;
+}
 .content {
     flex: 1;
 }
 .hero {
-    position: relative;
     text-align: center;
     color: white;
-    height: 70vh;
+    background: url('images/image2.jpg') no-repeat center center/cover;
+    height: 61vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .hero-content {
     position: absolute;
-    background: rgba(43, 141, 0, 0.22);
-    width: 900px;
-    height: 120px;
-    padding: 20px;
+    padding: -8px;
     border-radius: 10px;
 }
 .hero h1 {
-    font-size: 3rem;
+    font-size: 8rem;
     margin: 0;
+    font-family: serif;
+    color: aliceblue;
 }
 .hero p {
     font-size: 1.5rem;
