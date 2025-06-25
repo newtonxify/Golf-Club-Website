@@ -1,7 +1,7 @@
-/* About Section Styling */
+/* About Section Styling 
 .about {
     position: relative;
-    top: 120px;
+    top: 70px;
     text-align: center;
     background-color: rgba(0, 142, 34, 0);
     padding: 50px;
@@ -24,10 +24,10 @@
     line-height: 1.6;
         }
 
-/* Executives Section Styling */
+/* Executives Section Styling
 .executives {
     position: relative;
-    top: 30px;
+    top: 2px;
     text-align: center;
     margin: 50px 0;
     opacity: 0;
@@ -102,3 +102,4 @@
         transform: translateY(0);
             }
         }
+        */

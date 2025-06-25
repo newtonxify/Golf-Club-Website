@@ -1,29 +1,84 @@
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-        }
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-        }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-        }
+.filterable_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-        }
+/*button{
+    /*padding: 10px 20px;
+    margin: 28px 143px   ;
+    font-size:  26px;
+    background: #fff;
+    border: none;
+    border-radius:16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}*/
+button.active{
+    background:rgba(18, 66, 0, 0.692);
+    color: #fff;
+}
+.filterable_cards{
+    display: flex;
+    margin: 0 365px 100px 365px;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.card{
+    flex-grow:1;
+    height: 358px;
+    flex-basis: 300px;
+    background-color: rgba(18, 66, 0, 0.692);
+    padding:3px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.card.hide{
+    display: none;
+}
+.card img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0 ;
+}
 
-.gallery-item:hover {
-    transform: scale(1.1);
-        }
+.card_title{
+    font-family: "Lato", sans-serif;
+    font-size: 23px;
+    font-weight: 500px;
+    color:#fff;
+    margin-top: 12px;
+}
+
+@media (max-width: 1122px) {
+    
+    .filterable_cards{
+        display: flex;
+        margin: 0 20px 100px 20px;
+        gap:20px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

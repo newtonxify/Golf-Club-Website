@@ -1,38 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMC Golf Club - Gallery</title>
-    <link rel="stylesheet" href="styles/Styles.css">
-    <link rel="stylesheet" href="styles/gallery_styles.css">
-</head>
-<body>
-    <nav class="navbar glowing">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="membership.html">Membership</a></li>
-            <li><a href="monthly schedule.html">Monthly Schedule</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <h2 style="text-align:center; margin-top: 150px;">Golf Club Gallery</h2>
-    <div class="gallery-container">
-        <div class="gallery-item"><img src="images/image1.png" alt="Golf Course"></div>
-        <div class="gallery-item"><img src="images/image2.jpg" alt="Clubhouse"></div>
-        <div class="gallery-item"><img src="images/image3.jpg" alt="Golf Tournament"></div>
-        <div class="gallery-item"><img src="images/image4.jpeg" alt="Scenic View"></div>
-        <div class="gallery-item"><img src="images/image5.jpeg" alt="Practice Area"></div>
-        <div class="gallery-item"><img src="images/image7.jpeg" alt="Members Playing"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PMC Golf Club - Gallery</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=routine" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="styles/lightbox.css" />
+        <link rel="stylesheet" href="styles/about_styles.css" />
+        <link rel="stylesheet" href="styles/Styles.css" />
+        <script src="scripts/script.js" defer></script>
+        <script src="scripts/GalleryScript.js" defer></script>
+        <link rel="stylesheet" href="styles/gallery_styles.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <!-- Navbar with centered links -->
+<nav class="bg-lime-900 px-4 py-3">
+  <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between">
+    <!-- Toggle button for mobile -->
+    <button
+      class="inline-flex items-center p-2 text-stone-50 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+      onclick="document.getElementById('pmcNavbar').classList.toggle('hidden')"
+      aria-controls="pmcNavbar"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Centered links -->
+    <div id="pmcNavbar" class="hidden w-full md:flex md:justify-center md:items-center">
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-6 md:mt-0 text-lg font-medium">
+        <li><a href="index.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Home</a></li>
+        <li><a href="membership.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Membership</a></li>
+        <li><a href="monthly schedule.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Tournaments</a></li>
+        <li><a href="gallery.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Gallery</a></li>
+        <li><a href="contact.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Contacts</a></li>
+      </ul>
     </div>
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 PMC Golf Club. All rights reserved.</p>
+  </div>
+</nav>
+
+<!-- Logo above the content, aligned left -->
+<div class="container mx-auto mt-3">
+  <div class="text-left">
+    <a href="index.html">
+      <img src="images/logo png.png" alt="PMC Golf Club Logo" class="h-[150px] z-[3000]" />
+    </a>
+  </div>
+</div>
+
+        <!--Hero Section-->
+        <div class="container">
+            <div class="filterable_buttons">
+                <button class="active m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="all">Show all Images</button>
+                <button class="m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="2024">2024</button>
+                <button class="m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="2025">2025</button>
+            </div>
         </div>
-    </footer>
-</body>
+
+        <div class="filterable_cards">
+            <div class="card" data-name="2024">
+                <a href="event1.html" target="_blank">
+                    <img src="Media/IMG-20250228-WA0016.jpg" alt="24" />
+                </a>
+                <div class="card_body">
+                    <h6 class="card_title">Ba-Phalaborwa Tournament 1</h6>
+                </div>
+            </div>
+            <div class="card" data-name="2024">
+                <a href="event2.html" target="_blank">
+                    <img src="Media/IMG-20250228-WA0047.jpg" alt="24" />
+                </a>
+                <div class="card_body">
+                    <h6 class="card_title">Event 2</h6>
+                </div>
+            </div>
+            <div class="card" data-name="2025">
+                <img src="Media/IMG-20250228-WA0101.jpg" alt="25" />
+                <div class="card_body">
+                    <h6 class="card_title">Event 3</h6>
+                </div>
+            </div>
+            <div class="card" data-name="2025">
+                <img src="Media/IMG-20250228-WA0015.jpg" alt="2024" />
+                <div class="card_body">
+                    <h6 class="card_title">Event 4</h6>
+                </div>
+            </div>
+            <div class="card" data-name="2025">
+                <img src="Media/IMG-20250228-WA0019.jpg" alt="24" />
+                <div class="card_body">
+                    <h6 class="card_title">Event 5</h6>
+                </div>
+            </div>
+        </div>
+
+   <!-- Footer -->
+  <footer class="bg-green-950 text-gray-200 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Contact Details -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+        <p class="text-sm mb-2"><strong>Email:</strong> golf.info@palabora.co.za</p>
+        <p class="text-sm mb-2"><strong>Phone:</strong> +27 82 855 1460</p>
+        <p class="text-sm"><strong>Address:</strong><br>
+          1 Copper Rd.<br>
+          Phalaborwa, 1389
+        </p>
+      </div>
+
+      <!-- Vision & Mission -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Vision | Mission | Values</h3>
+        <p class="text-sm mb-4"><strong>Vision:</strong><br>
+          To become a leader in the mining industry through our performance.
+        </p>
+        <p class="text-sm mb-4"><strong>Mission:</strong><br>
+          To safely and profitably extract and convert minerals and metal from the Palabora ore body.
+        </p>
+        <p class="text-sm"><strong>Values:</strong><br>
+          Integrity | Courage | Caring | Teamwork | Accpountability <br>
+        </p>
+      </div>
+
+      <!-- Constitution Link -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Resources</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:01e0d124-bdc5-4a77-8638-12dacef6cd24"
+               class="text-green-300 hover:text-green-100 hover:underline">
+              Chairperson Annual General Meeting Report (Download PDF)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-4">
+      <div class="max-w-4xl mx-auto px-4 py-4 text-center text-sm text-gray-400">
+        &copy; 2025 PMC Golf Club. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+    </body>
 </html>
