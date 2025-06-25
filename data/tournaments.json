@@ -1,0 +1,109 @@
+{
+    "upcomingTournaments": [
+      {
+        "date": "2025-02-01",
+        "name": "BA-PHALABORWA TOURNAMENT 1",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-04-04",
+        "name": "BA-PHALABORWA TOURNAMENT 2",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-05-31",
+        "name": "BA-PHALABORWA TOURNAMENT 3",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-06-28",
+        "name": "BA-PHALABORWA TOURNAMENT 4",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-08-02",
+        "name": "BA-PHALABORWA TOURNAMENT 5",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-09-06",
+        "name": "BA-PHALABORWA TOURNAMENT 6",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-10-08",
+        "name": "BA-PHALABORWA TOURNAMENT 7",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      },
+      {
+        "date": "2025-11-25",
+        "name": "BA-PHALABORWA TOURNAMENT 8",
+        "location": "BA-PHALABORWA GOLF CLUB"
+      }
+    ],
+    "pastTournaments": [
+      {
+        "date": "2024-06-08",
+        "name": "BA-PHALABORWA TOURNAMENT 1",
+        "winner": {
+          "name": "Pierre Van Deventer",
+          "imageUrl": "Media/Tourbnament1_024_winner_Pierre.jpg"
+        }
+      },
+      {
+        "date": "2024-07-06",
+        "name": "BA-PHALABORWA TOURNAMENT 2",
+        "winner": {
+          "name": "Murehwa Mangere",
+          "imageUrl": "Media/Murehwa_T2.jpg"
+        }
+      },
+      {
+        "date": "2024-08-03",
+        "name": "BA-PHALABORWA TOURNAMENT 3",
+        "winner": {
+          "name": "Jantjie Bessenger",
+          "imageUrl": "Media/T3 Jantjie.jpg"
+        }
+      },
+      {
+        "date": "2024-09-07",
+        "name": "WHITE RIVER TOURNAMENT 4",
+        "winner": {
+          "name": "Louis Roeloffze",
+          "imageUrl": "Media/T4 and T7 Louis.jpg"
+        }
+      },
+      {
+        "date": "2024-10-05",
+        "name": "BA-PHALABORWA TOURNAMENT 5",
+        "winner": {
+          "name": "Pierre Van Deventer",
+          "imageUrl": "Media/Tourbnament1_024_winner_Pierre.jpg"
+        }
+      },
+      {
+        "date": "2024-11-09",
+        "name": "BA-PHALABORWA TOURNAMENT 6",
+        "winner": {
+          "name": "Stephen du Plessis",
+          "imageUrl": "Media/T6 Winner - Euphoria Stephan.jpg"
+        }
+      },
+      {
+        "date": "2024-12-15",
+        "name": "BA-PHALABORWA TOURNAMENT 7",
+        "winner": {
+          "name": "Louis Roeloffze",
+          "imageUrl": "Media/T4 and T7 Louis.jpg"
+        }
+      }
+    ],
+    "ipsWinners": [
+      {
+        "year": 2024,
+        "name": "Pierre Van Deventer",
+        "imageUrl": "Media/Screenshot-2025-06-04-094217.png"
+      }
+    ]
+  }
