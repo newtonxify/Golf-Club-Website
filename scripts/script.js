@@ -1,3 +1,22 @@
+// Toggle the sidebar when the hamburger icon is clicked
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('active');
+}
+
+// Close the sidebar when clicking outside of it
+document.addEventListener('click', function(e) {
+  var sidebar = document.getElementById('sidebar');
+  var hamburger = document.querySelector('.hamburger');
+  
+  // If sidebar is active and the click is not on sidebar or hamburger, close sidebar.
+  if (sidebar.classList.contains('active') && 
+      !sidebar.contains(e.target) && 
+      !hamburger.contains(e.target)) {
+    sidebar.classList.remove('active');
+  }
+});
+
+
 // When the page loads, fetch images.json, then populate each carousel
     document.addEventListener("DOMContentLoaded", () => {
       fetch("images.json")
@@ -90,8 +109,9 @@
           document.getElementById("carousel3").innerHTML =
             buildCarouselHTML("carousel3", carousels.carousel3);
 
-          // Initialize each carousel via JS (so data-bs-interval works)
-          // (Bootstrap 5’s data-bs-ride="carousel" already auto-initializes
+          // Finally, initialize each carousel via JS (so data-bs-interval works)
+          // (Bootstrap 5’s data-bs-ride="carousel" already auto-initializes,
+          //  but we explicitly do it here for clarity)
           new bootstrap.Carousel(
             document.getElementById("carousel1"),
             {

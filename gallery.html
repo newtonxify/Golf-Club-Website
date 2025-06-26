@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="styles/gallery_styles.css" />
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="bg-gray-100 text-gray-800">
         <!-- Navbar with centered links -->
 <nav class="bg-lime-900 px-4 py-3">
   <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between">
@@ -41,7 +41,7 @@
       <ul class="flex flex-col mt-4 md:flex-row md:space-x-6 md:mt-0 text-lg font-medium">
         <li><a href="index.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Home</a></li>
         <li><a href="membership.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Membership</a></li>
-        <li><a href="monthly schedule.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Tournaments</a></li>
+        <li><a href="monthly schedule.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Monthly Schedule</a></li>
         <li><a href="gallery.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Gallery</a></li>
         <li><a href="contact.html" class="block py-2 px-3 text-stone-50 hover:text-green-600">Contacts</a></li>
       </ul>
@@ -59,63 +59,38 @@
 </div>
 
         <!--Hero Section-->
-        <div class="container">
-            <div class="filterable_buttons">
-                <button class="active m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="all">Show all Images</button>
-                <button class="m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="2024">2024</button>
-                <button class="m-4 hover:bg-green-100/100 rounded-lg size-16" data-name="2025">2025</button>
-            </div>
-        </div>
+        <main class="container mx-auto py-8">
+    <!-- Gallery Tiles -->
+    <div id="event-tiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Tiles injected by JS -->
+    </div>
+  </main>
 
-        <div class="filterable_cards">
-            <div class="card" data-name="2024">
-                <a href="event1.html" target="_blank">
-                    <img src="Media/IMG-20250228-WA0016.jpg" alt="24" />
-                </a>
-                <div class="card_body">
-                    <h6 class="card_title">Ba-Phalaborwa Tournament 1</h6>
-                </div>
-            </div>
-            <div class="card" data-name="2024">
-                <a href="event2.html" target="_blank">
-                    <img src="Media/IMG-20250228-WA0047.jpg" alt="24" />
-                </a>
-                <div class="card_body">
-                    <h6 class="card_title">Event 2</h6>
-                </div>
-            </div>
-            <div class="card" data-name="2025">
-                <img src="Media/IMG-20250228-WA0101.jpg" alt="25" />
-                <div class="card_body">
-                    <h6 class="card_title">Event 3</h6>
-                </div>
-            </div>
-            <div class="card" data-name="2025">
-                <img src="Media/IMG-20250228-WA0015.jpg" alt="2024" />
-                <div class="card_body">
-                    <h6 class="card_title">Event 4</h6>
-                </div>
-            </div>
-            <div class="card" data-name="2025">
-                <img src="Media/IMG-20250228-WA0019.jpg" alt="24" />
-                <div class="card_body">
-                    <h6 class="card_title">Event 5</h6>
-                </div>
-            </div>
-        </div>
+  <!-- Modal for detail view -->
+  <div id="modal" class="fixed inset-0 bg-green-950 bg-opacity-60 flex justify-center items-center hidden z-50">
+    <div class="bg-lime-100/10 p-6 rounded-lg w-auto w-full relative">
+      <button id="closeBtn" class="absolute top-2 right-2 text-gray-700 text-xl font-bold">&times;</button>
+      <h2 id="event-title" class="text-xl text-lime-500 font-bold mb-2"></h2>
+      <p id="event-desc" class="text-lime-950 mb-4"></p>
+      <div id="modal-content" class="w-full text-center"></div>
+      <div class="flex justify-between mt-4">
+        <button id="prevBtn" class="px-4 py-2 bg-gray-300 rounded">Previous</button>
+        <button id="nextBtn" class="px-4 py-2 bg-gray-300 rounded">Next</button>
+      </div>
+    </div>
+  </div>
 
    <!-- Footer -->
   <footer class="bg-green-950 text-gray-200 mt-12">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="max-w-4xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Contact Details -->
       <div>
         <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
         <p class="text-sm mb-2"><strong>Email:</strong> golf.info@palabora.co.za</p>
         <p class="text-sm mb-2"><strong>Phone:</strong> +27 82 855 1460</p>
         <p class="text-sm"><strong>Address:</strong><br>
-          Palabora Copper (Pty) Limited<br>
-          Copper Road 1 Phalaborwa,<br>
-          1390, Limpopo, ZA
+          1 Copper Rd.<br>
+          Phalaborwa, 1389
         </p>
       </div>
 
@@ -128,8 +103,12 @@
         <p class="text-sm mb-4"><strong>Mission:</strong><br>
           To safely and profitably extract and convert minerals and metal from the Palabora ore body.
         </p>
-        <p class="text-sm"><strong>Values:</strong><br>
-          Integrity | Courage | Caring | Teamwork | Accpountability <br>
+        <p class="text-sm"><strong>Mission:</strong><br>
+          • Integrity.<br>
+          • Courage.<br>
+          • Caring.<br>
+          • Teamwork.<br>
+          • Accountability.
         </p>
       </div>
 
@@ -137,6 +116,12 @@
       <div>
         <h3 class="text-xl font-semibold mb-3">Resources</h3>
         <ul class="space-y-2">
+          <li>
+            <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:89119e3e-766b-4bab-9674-139d9b183744"
+               class="text-green-300 hover:text-green-100 hover:underline">
+              Club Constitution (Download PDF)
+            </a>
+          </li>
           <li>
             <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:01e0d124-bdc5-4a77-8638-12dacef6cd24"
                class="text-green-300 hover:text-green-100 hover:underline">
@@ -154,5 +139,7 @@
     </div>
   </footer>
 
+   <!-- External JS files -->
+  <script src="scripts/gallery.js"></script>
     </body>
 </html>
