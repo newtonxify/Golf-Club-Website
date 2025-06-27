@@ -18,7 +18,7 @@ fetch('data/tournaments.json')
     const upcomingList = document.getElementById('upcoming-list');
     tournamentData.upcomingTournaments.forEach(tourn => {
       const card = document.createElement('div');
-      card.className = 'bg-white rounded-lg shadow-md p-4 flex justify-between items-center';
+      card.className = 'bg-white/50 rounded-lg shadow-md p-4 flex justify-between items-center';
       card.innerHTML = `
         <div>
           <h3 class="text-xl font-semibold text-green-700">${tourn.name}</h3>
@@ -98,7 +98,7 @@ fetch('data/tournaments.json')
       if (!winnerObj) return;
 
       const wrapper = document.createElement('div');
-      wrapper.className = 'bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center';
+      wrapper.className = 'bg-yellow-600/60 rounded-lg shadow-lg p-6 flex flex-col items-center text-center border-2 border-solid';
       wrapper.innerHTML = `
         <h3 class="text-2xl font-bold text-green-800">PMC GOLF Club</h3>
         <p class="text-lg text-gray-700 mb-4">IPS TOURNAMENT Winner (${winnerObj.year})</p>
@@ -138,7 +138,7 @@ fetch('data/tournaments.json')
 
       filtered.forEach(tourn => {
         const card = document.createElement('div');
-        card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+        card.className = 'bg-white/60 rounded-lg shadow-md overflow-hidden';
         card.innerHTML = `
           <div class="p-4">
             <h3 class="text-lg font-semibold text-green-700">${tourn.name}</h3>
